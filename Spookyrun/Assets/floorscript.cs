@@ -7,6 +7,7 @@ public class floorscript : MonoBehaviour
     public static float speed = 1;
     public Vector2 Dir = new Vector2(00.1F, 0f);
     // Use this for initialization
+    //isActive can be used for an object pool
     void Start()
     {
        

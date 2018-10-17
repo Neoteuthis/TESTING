@@ -65,6 +65,7 @@
     <Compile Include="Assets\controller.cs" />
     <Compile Include="Assets\firescript.cs" />
     <Compile Include="Assets\floorscript.cs" />
+    <Compile Include="Assets\JUMPRESET.cs" />
     <Compile Include="Assets\mario.cs" />
     <Compile Include="Assets\playerscript.cs" />
     <Compile Include="Assets\SPAWNER.cs" />

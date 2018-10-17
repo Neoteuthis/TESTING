@@ -18,3 +18,4 @@ public SpriteRenderer firesprite;
         //firesprite.flipX = false;
     }
 }
+//add script to slow player perhaps?

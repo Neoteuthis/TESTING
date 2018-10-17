@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class collectorscript : MonoBehaviour {
-
+  public bool recurring = false;
 	// Use this for initialization
 	void Start () {
 		
@@ -38,7 +38,13 @@ public class collectorscript : MonoBehaviour {
         if (collision.gameObject.tag == "Player")
         {
             floorscript.speed++;
-            Destroy(gameObject);
+            if (recurring == false)
+            {
+                Destroy(gameObject);
+            } else
+            {
+                transform.Translate(Random.Range(40f, 80f), Random.Range(-5.0f, 5.0f), 0F);
+            }
         }
     }
 }
