@@ -6,7 +6,7 @@ public class firescript : MonoBehaviour {
 public SpriteRenderer firesprite;
 	// Use this for initialization
 	void Start () {
-     firesprite = gameObject.GetComponent<SpriteRenderer>();
+     //firesprite = gameObject.GetComponent<SpriteRenderer>();
         
     }
 
