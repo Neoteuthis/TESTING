@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class collectorscript : MonoBehaviour {
   public bool recurring = false;
+    public bool isCandy = true;
+    public bool isBoughtttle = false;
+    public bool isSpringshroom = false;
 	// Use this for initialization
 	void Start () {
 		
@@ -12,12 +15,12 @@ public class collectorscript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        /*  transform.Translate(-0.05F, 0F, 0F);
+       // transform.Translate(-0.05F, 0F, 0F);
           var X = transform.position;
-          if (X.x < -20)
+          /*  if (X.x < -20)
           {
               transform.Translate(40, Random.Range(-5.0f, 5.0f), 0F);
-          }
+          }  */
           if (X.y < -5)
           {
               transform.Translate(0F,0.1F, 0F);
@@ -31,13 +34,23 @@ public class collectorscript : MonoBehaviour {
           //  {
           //    Destroy(this);
           //  }
-      */
+    
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            floorscript.speed++;
+            if (isCandy == true) { 
+                floorscript.speed++;
+            }
+            if(isBoughtttle == true)
+            {
+                playerscript.waterlevel++;
+            }
+            if(isSpringshroom == true)
+            {
+                playerscript.shrooms++;
+            }
             if (recurring == false)
             {
                 Destroy(gameObject);
