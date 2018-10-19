@@ -34,7 +34,7 @@ public class playerscript : MonoBehaviour {
     void Update() {
         var X = transform.position;
         float moveHorizontal = Input.GetAxis("Horizontal");
-        return;
+       // return;
         float moveVertical = Input.GetAxis("Vertical");
         FinalDir = Dir * floorscript.speed;
        
