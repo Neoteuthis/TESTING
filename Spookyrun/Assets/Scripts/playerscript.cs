@@ -19,6 +19,7 @@ public class playerscript : MonoBehaviour {
     public int Timer1 = 0;
     public int Timer2 = 0;
     public bool highjump = true;
+    public bool jumping = true;
     public bool spitting = true;
     public float jumptime = 5;
 
@@ -33,6 +34,7 @@ public class playerscript : MonoBehaviour {
     void Update() {
         var X = transform.position;
         float moveHorizontal = Input.GetAxis("Horizontal");
+        return;
         float moveVertical = Input.GetAxis("Vertical");
         FinalDir = Dir * floorscript.speed;
        
@@ -95,7 +97,8 @@ public class playerscript : MonoBehaviour {
         {
             transform.Translate(Vector2.up * 20* Time.deltaTime, Space.World);
         }
-        Timer1--;
+        if(jumping)
+            Timer1--;
         Timer2--;
     }
 }
