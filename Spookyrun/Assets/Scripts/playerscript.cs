@@ -8,21 +8,22 @@ public class playerscript : MonoBehaviour {
     public Vector2 Dir = new Vector2(00.1F, 0f);
     public Vector2 FinalDir = new Vector2(00.1F, 0f);
     public SpriteRenderer playersprite;
-    private Rigidbody2D pbody;
     
     //collectables
     public static int waterlevel = 0;
     public static int shrooms = 0;
-
+    private GameObject waterObj = null;
     //functionvars
     public int Timer1 = 0;
+    public int Timer2 = 0;
     public bool highjump = true;
+    public bool spitting = true;
     public float jumptime = 5;
 
     // Use this for initialization
     void Start() {
-        pbody = GetComponent<Rigidbody2D>();
         playersprite = gameObject.GetComponent<SpriteRenderer>();
+        waterObj = FindObjectOfType<waterscript>().gameObject;
     }
 
     // Update is called once per frame
@@ -31,7 +32,6 @@ public class playerscript : MonoBehaviour {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
         FinalDir = Dir * floorscript.speed;
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
        
         //characterDeath
         if(X.y < -7)
@@ -39,6 +39,7 @@ public class playerscript : MonoBehaviour {
             floorscript.speed = 1;
             SceneManager.LoadScene("SampleScene");
         }
+        //CONTROLS
         if (Input.GetKey(KeyCode.W))
         {
             if (shrooms > 0 && highjump == true)
@@ -64,6 +65,25 @@ public class playerscript : MonoBehaviour {
         {
             transform.Translate(-0.15F*FinalDir);
             playersprite.flipX = true;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            if (waterlevel > 0 && spitting == true)
+            {
+                waterlevel--;
+                Timer2 = 10;
+                spitting = false;
+            }
+            if (Timer2 > 0)
+            {
+                waterObj.transform.position = gameObject.transform.position;
+                //change sprite
+            }
+            else
+            {
+                //change sprite back
+                spitting = true;
+            }
         }
         if (Input.GetKey("space"))
         {

@@ -24,5 +24,9 @@ public SpriteRenderer firesprite;
             
             Debug.Log("HIT!");
         }
+        if (collision.gameObject.tag == "Water")
+        {
+            Destroy(gameObject);
+        }
     }
 }
