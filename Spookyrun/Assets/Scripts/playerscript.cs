@@ -7,8 +7,8 @@ public class playerscript : MonoBehaviour {
 
     public Vector2 Dir = new Vector2(00.1F, 0f);
     public Vector2 FinalDir = new Vector2(00.1F, 0f);
+    //spriteactions
     public SpriteRenderer playersprite;
-
     public Sprite mySprite;
     public Sprite mynormalsprite;
     //collectables

@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class floorscript : MonoBehaviour
 {
+    public bool isRoom = false;
     public static float speed = 1;
     public Vector2 Dir = new Vector2(00.1F, 0f);
     // Use this for initialization
+    public bool isBackground = false;
     //isActive can be used for an object pool
     void Start()
     {
@@ -20,10 +22,19 @@ public class floorscript : MonoBehaviour
         var X = transform.position;
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
         transform.Translate(Dir*speed);
-        if (X.x < -20)
+        //respawn
+         if(isRoom == true) {
+            if (X.x < -80)
+            {
+                transform.Translate(80F, 0F, 0F);
+            }
+        }
+        else if (X.x < -20)
         {
-            transform.Translate(40F, 0F, 0F);
-            //destroy later after spawner works
+            {
+                transform.Translate(Random.Range(40f,40f), 0F, 0F);
+                //set y value to 1 of 3 levels to randomize platform or place this code into larger levels
+            }
         }
     }
     void OnCollisionEnter2D(Collision2D coll)
@@ -31,7 +42,7 @@ public class floorscript : MonoBehaviour
         // If a missile hits this object
         if (coll.transform.tag == "Player")
         {
-            Debug.Log("HIT!");
+           // Debug.Log("HIT!");
         }
     }
 }
