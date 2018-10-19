@@ -8,7 +8,9 @@ public class playerscript : MonoBehaviour {
     public Vector2 Dir = new Vector2(00.1F, 0f);
     public Vector2 FinalDir = new Vector2(00.1F, 0f);
     public SpriteRenderer playersprite;
-    
+
+    public Sprite mySprite;
+    public Sprite mynormalsprite;
     //collectables
     public static int waterlevel = 0;
     public static int shrooms = 0;
@@ -22,9 +24,10 @@ public class playerscript : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-        playersprite = gameObject.GetComponent<SpriteRenderer>();
+     playersprite = gameObject.GetComponent<SpriteRenderer>();
         waterObj = FindObjectOfType<waterscript>().gameObject;
-    }
+        //mySprite = "spookyrunplayerpew";
+}
 
     // Update is called once per frame
     void Update() {
@@ -78,10 +81,13 @@ public class playerscript : MonoBehaviour {
             {
                 waterObj.transform.position = gameObject.transform.position;
                 //change sprite
+                this.GetComponent<SpriteRenderer>().sprite = mySprite;
+                // playersprite;
             }
             else
             {
                 //change sprite back
+                this.GetComponent<SpriteRenderer>().sprite = mynormalsprite;
                 spitting = true;
             }
         }
@@ -90,5 +96,6 @@ public class playerscript : MonoBehaviour {
             transform.Translate(Vector2.up * 20* Time.deltaTime, Space.World);
         }
         Timer1--;
+        Timer2--;
     }
 }
