@@ -16,6 +16,7 @@ public class playerscript : MonoBehaviour {
     public static int shrooms = 0;
     public static int score = 0;
     public static int highscore;
+    public static int HP = 10;
     private GameObject waterObj = null;
    
     //functionvars
@@ -110,4 +111,6 @@ public class playerscript : MonoBehaviour {
         Timer2--;
         score+= Mathf.RoundToInt(floorscript.speed);
     }
+  
+ 
 }

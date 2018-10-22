@@ -8,6 +8,18 @@ TagManager:
   - COLLECTABLE
   - fire
   - Water
+  - Room
+  - Room1
+  - Room1(2)
+  - Room1(3)
+  - Room1(4)
+  - Room1(5)
+  - Room1(6)
+  - Room1(7)
+  - Room1(8)
+  - Room1(9)
+  - Room1(1)
+  - worldedge
   layers:
   - Default
   - TransparentFX

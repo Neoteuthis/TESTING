@@ -26,7 +26,7 @@ public class floorscript : MonoBehaviour
          if(isRoom == true) {
             if (X.x < -80)
             {
-                transform.Translate(80F, 0F, 0F);
+              ///  transform.Translate(80F, 0F, 0F);
             }
         }
         else if (X.x < -20)

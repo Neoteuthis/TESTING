@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class firescript : MonoBehaviour {
 public SpriteRenderer firesprite;
+   // public GameObject plays;
 	// Use this for initialization
 	void Start () {
      firesprite = gameObject.GetComponent<SpriteRenderer>();
@@ -21,10 +23,16 @@ public SpriteRenderer firesprite;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if (collision.gameObject.tag == "Player")
         {
-
-            floorscript.speed--;
+            floorscript.speed = 1;
+            if (playerscript.score > playerscript.highscore)
+            {
+                playerscript.highscore = playerscript.score;
+            }
+            playerscript.score = 0;
+            SceneManager.LoadScene("SampleScene");
         }
         if (collision.gameObject.tag == "Water")
         {
