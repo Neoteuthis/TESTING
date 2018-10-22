@@ -70,8 +70,8 @@
     <Compile Include="Assets\Scripts\playerscript.cs" />
     <Compile Include="Assets\Scripts\SPAWNER.cs" />
     <Compile Include="Assets\Scripts\tilecontroller.cs" />
-    <Compile Include="Assets\uiscript.cs" />
-    <Compile Include="Assets\waterscript.cs" />
+    <Compile Include="Assets\Scripts\uiscript.cs" />
+    <Compile Include="Assets\Scripts\waterscript.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Neote/Documents/GitHub/TESTING/Spookyrun/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

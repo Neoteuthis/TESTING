@@ -14,7 +14,10 @@ public class playerscript : MonoBehaviour {
     //collectables
     public static int waterlevel = 0;
     public static int shrooms = 0;
+    public static int score = 0;
+    public static int highscore;
     private GameObject waterObj = null;
+   
     //functionvars
     public int Timer1 = 0;
     public int Timer2 = 0;
@@ -42,6 +45,11 @@ public class playerscript : MonoBehaviour {
         if(X.y < -7)
         {
             floorscript.speed = 1;
+            if(score > highscore)
+            {
+                highscore = score;
+            }
+            score = 0;
             SceneManager.LoadScene("SampleScene");
         }
         //CONTROLS
@@ -100,5 +108,6 @@ public class playerscript : MonoBehaviour {
         if(jumping)
             Timer1--;
         Timer2--;
+        score++;
     }
 }
