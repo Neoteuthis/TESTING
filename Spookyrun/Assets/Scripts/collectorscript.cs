@@ -41,7 +41,7 @@ public class collectorscript : MonoBehaviour {
         if (collision.gameObject.tag == "Player")
         {
             if (isCandy == true) { 
-                floorscript.speed++;
+                floorscript.speed+= 0.5f;
             }
             if(isBoughtttle == true)
             {

@@ -69,6 +69,8 @@
     <Compile Include="Assets\Scripts\mario.cs" />
     <Compile Include="Assets\Scripts\playerscript.cs" />
     <Compile Include="Assets\Scripts\SPAWNER.cs" />
+    <Compile Include="Assets\Scripts\Startbutton.cs" />
+    <Compile Include="Assets\Scripts\STARTERSCRIPT.cs" />
     <Compile Include="Assets\Scripts\tilecontroller.cs" />
     <Compile Include="Assets\Scripts\uiscript.cs" />
     <Compile Include="Assets\Scripts\waterscript.cs" />

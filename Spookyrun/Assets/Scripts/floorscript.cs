@@ -5,7 +5,7 @@ using UnityEngine;
 public class floorscript : MonoBehaviour
 {
     public bool isRoom = false;
-    public static float speed = 1;
+    public static float speed = 0;
     public Vector2 Dir = new Vector2(00.1F, 0f);
     // Use this for initialization
     public bool isBackground = false;

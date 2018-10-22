@@ -108,6 +108,6 @@ public class playerscript : MonoBehaviour {
         if(jumping)
             Timer1--;
         Timer2--;
-        score++;
+        score+= Mathf.RoundToInt(floorscript.speed);
     }
 }
