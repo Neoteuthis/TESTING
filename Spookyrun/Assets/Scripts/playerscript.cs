@@ -41,9 +41,9 @@ public class playerscript : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         var X = transform.position;
-        float moveHorizontal = Input.GetAxis("Horizontal");
+      //  float moveHorizontal = Input.GetAxis("Horizontal");
        // return;
-        float moveVertical = Input.GetAxis("Vertical");
+      //  float moveVertical = Input.GetAxis("Vertical");
         FinalDir = Dir * floorscript.speed;
        
         //characterDeath

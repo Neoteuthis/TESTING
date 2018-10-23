@@ -15,7 +15,7 @@ public class roomscript : MonoBehaviour
     void Update()
     {
         var X = transform.position;
-        var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
+       // var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
         if (X.x < -10 && causespawn == true)
         {
             summonscript.countdown--;

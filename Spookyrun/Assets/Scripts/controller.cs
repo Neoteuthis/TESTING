@@ -12,7 +12,7 @@ public class controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         var X = transform.position;
-        var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
+      //  var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
         var z = Input.GetAxis("Vertical") * Time.deltaTime * -6.0f;
         //use the line below for bonus marks! true:false condition
       //  string mygame = (x > z) ? "noot" : "moot";

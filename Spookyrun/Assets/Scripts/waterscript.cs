@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class waterscript : MonoBehaviour {
-    private GameObject playerObj = null;
+  //  private GameObject playerObj = null;
 
     // Use this for initialization
     void Start () {
-        playerObj = FindObjectOfType<playerscript>().gameObject;
+      //  playerObj = FindObjectOfType<playerscript>().gameObject;
     }
 	
 	// Update is called once per frame

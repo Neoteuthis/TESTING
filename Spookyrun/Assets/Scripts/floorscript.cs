@@ -20,7 +20,7 @@ public class floorscript : MonoBehaviour
     {
        
         var X = transform.position;
-        var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
+       // var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
         transform.Translate(Dir*speed);
         //respawn
          if(isRoom == true) {
