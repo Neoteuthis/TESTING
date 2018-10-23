@@ -65,6 +65,7 @@
     <Compile Include="Assets\EZ Object Pools\Scripts\PooledObjects\ParticleSystemDisable.cs" />
     <Compile Include="Assets\EZ Object Pools\Scripts\PooledObjects\PooledObject.cs" />
     <Compile Include="Assets\EZ Object Pools\Scripts\PooledObjects\TimedDisable.cs" />
+    <Compile Include="Assets\roomscript.cs" />
     <Compile Include="Assets\Scripts\collectorscript.cs" />
     <Compile Include="Assets\Scripts\controller.cs" />
     <Compile Include="Assets\Scripts\firescript.cs" />

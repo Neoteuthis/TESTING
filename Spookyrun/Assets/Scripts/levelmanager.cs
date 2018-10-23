@@ -25,7 +25,7 @@ public class levelmanager : MonoBehaviour {
         GameObject room = objectpooler.SharedInstance.GetPooledObject(GetRoom());
         if (room != null)
         {
-            room.transform.position = new Vector3(80F, 0F, 1.0f);
+            room.transform.position = new Vector3(60F, -2F, 1.0f);
             room.SetActive(true);
         }
     }
