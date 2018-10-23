@@ -62,7 +62,7 @@ public class playerscript : MonoBehaviour {
                 Timer1 = 100;
                 highjump = false;
             }
-            if (Timer1 > 0)
+            if (Timer1 > 0 && X.y> -10)
             {
                 transform.Translate(Vector2.up * 60 * Time.deltaTime, Space.World);
             } else

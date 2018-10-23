@@ -22,7 +22,7 @@ public class roomscript : MonoBehaviour
             if (summonscript.countdown <= 0)
             {
                 summonscript.spawnnow = true;
-                summonscript.countdown = 2;
+                summonscript.countdown = levelmanager.maxspawns;
             }
             causespawn = false;
         }
