@@ -21,12 +21,16 @@ public class levelmanager : MonoBehaviour {
     }
     public void spawnNewRoom()
     {
-
-        GameObject room = objectpooler.SharedInstance.GetPooledObject(GetRoom());
-        if (room != null)
+        int spawnNum = 3;
+        while (spawnNum >= 0)
         {
-            room.transform.position = new Vector3(60F, -2F, 1.0f);
-            room.SetActive(true);
+            GameObject room = objectpooler.SharedInstance.GetPooledObject(GetRoom());
+            if (room != null)
+            {
+                room.transform.position = new Vector3(60F+ (30*spawnNum), -2F, 1.0f);
+                room.SetActive(true);
+            }
+            spawnNum--;
         }
     }
 }

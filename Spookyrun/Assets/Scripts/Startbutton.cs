@@ -8,7 +8,7 @@ public class Startbutton : MonoBehaviour {
 
 	public void Clicked()
     {
-        floorscript.speed = 1;
+        floorscript.speed = 5;
         Destroy(ToDestroy);
         Destroy(gameObject);
     }

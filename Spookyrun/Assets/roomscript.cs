@@ -16,7 +16,7 @@ public class roomscript : MonoBehaviour
     {
         var X = transform.position;
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
-        if (X.x < -30 && causespawn == true)
+        if (X.x < -10 && causespawn == true)
         {
         summonscript.spawnnow = true;
             causespawn = false;
