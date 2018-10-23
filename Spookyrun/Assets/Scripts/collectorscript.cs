@@ -44,7 +44,7 @@ public class collectorscript : MonoBehaviour {
         {
             if (isCandy == true) { 
                 floorscript.speed+= 0.5f;
-                source.PlayOneShot(collectsound);
+              
             }
             if(isBoughtttle == true)
             {
@@ -54,6 +54,7 @@ public class collectorscript : MonoBehaviour {
             {
                 playerscript.shrooms++;
             }
+            source.PlayOneShot(collectsound);
             if (recurring == false)
             {
                 Destroy(gameObject);
@@ -61,6 +62,7 @@ public class collectorscript : MonoBehaviour {
             {
                 transform.Translate(Random.Range(40f, 80f), Random.Range(-5.0f, 5.0f), 0F);
             }
+          
         }
     }
     void Awake()

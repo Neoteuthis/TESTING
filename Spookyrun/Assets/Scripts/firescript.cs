@@ -32,6 +32,8 @@ public SpriteRenderer firesprite;
                 playerscript.highscore = playerscript.score;
             }
             playerscript.score = 0;
+            playerscript.waterlevel = 0;
+            playerscript.shrooms = 0;
             summonscript.spawnnow = true;
             summonscript.countdown = 3;
             SceneManager.LoadScene("SampleScene");

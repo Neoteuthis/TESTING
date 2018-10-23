@@ -55,6 +55,8 @@ public class playerscript : MonoBehaviour {
                 highscore = score;
             }
             score = 0;
+            waterlevel = 0;
+            shrooms = 0;
             summonscript.spawnnow = true;
             summonscript.countdown = 3;
             SceneManager.LoadScene("SampleScene");
