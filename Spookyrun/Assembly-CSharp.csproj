@@ -65,7 +65,6 @@
     <Compile Include="Assets\EZ Object Pools\Scripts\PooledObjects\ParticleSystemDisable.cs" />
     <Compile Include="Assets\EZ Object Pools\Scripts\PooledObjects\PooledObject.cs" />
     <Compile Include="Assets\EZ Object Pools\Scripts\PooledObjects\TimedDisable.cs" />
-    <Compile Include="Assets\roomscript.cs" />
     <Compile Include="Assets\Scripts\collectorscript.cs" />
     <Compile Include="Assets\Scripts\controller.cs" />
     <Compile Include="Assets\Scripts\firescript.cs" />
@@ -76,6 +75,7 @@
     <Compile Include="Assets\Scripts\objectpooler.cs" />
     <Compile Include="Assets\Scripts\playerscript.cs" />
     <Compile Include="Assets\Scripts\roomrandomizescript.cs" />
+    <Compile Include="Assets\Scripts\roomscript.cs" />
     <Compile Include="Assets\Scripts\SPAWNER.cs" />
     <Compile Include="Assets\Scripts\Startbutton.cs" />
     <Compile Include="Assets\Scripts\STARTERSCRIPT.cs" />

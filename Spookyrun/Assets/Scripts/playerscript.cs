@@ -18,7 +18,11 @@ public class playerscript : MonoBehaviour {
     public static int highscore;
     public static int HP = 10;
     private GameObject waterObj = null;
-   
+    //sounds
+    public AudioClip shootSound;
+    public AudioClip jumpSound;
+    public AudioClip superjumpsound;
+    private AudioSource source;
     //functionvars
     public int Timer1 = 0;
     public int Timer2 = 0;
@@ -43,7 +47,7 @@ public class playerscript : MonoBehaviour {
         FinalDir = Dir * floorscript.speed;
        
         //characterDeath
-        if(X.y < -7)
+        if(X.y < -7 || X.x < -20)
         {
             floorscript.speed = 1;
             if(score > highscore)
@@ -51,6 +55,8 @@ public class playerscript : MonoBehaviour {
                 highscore = score;
             }
             score = 0;
+            summonscript.spawnnow = true;
+            summonscript.countdown = 3;
             SceneManager.LoadScene("SampleScene");
         }
         //CONTROLS
@@ -61,6 +67,7 @@ public class playerscript : MonoBehaviour {
                 shrooms--;
                 Timer1 = 100;
                 highjump = false;
+                source.PlayOneShot(superjumpsound);
             }
             if (Timer1 > 0 && X.y> -10)
             {
@@ -89,10 +96,12 @@ public class playerscript : MonoBehaviour {
                 waterlevel--;
                 Timer2 = 10;
                 spitting = false;
+                source.PlayOneShot(shootSound);
             }
             if (Timer2 > 0)
             {
                 waterObj.transform.position = gameObject.transform.position;
+              
                 //change sprite
                 this.GetComponent<SpriteRenderer>().sprite = mySprite;
                 // playersprite;
@@ -109,11 +118,18 @@ public class playerscript : MonoBehaviour {
             transform.Translate(Vector2.up * 20* Time.deltaTime, Space.World);
             this.GetComponent<SpriteRenderer>().sprite = mynormalsprite;
         }
-        if(jumping)
+        if (Input.GetKeyDown("space"))
+        {
+            //source.PlayOneShot(jumpSound);
+        }
+        if (jumping)
             Timer1--;
         Timer2--;
         score+= Mathf.RoundToInt(floorscript.speed);
     }
-  
- 
+    void Awake()
+    {
+
+        source = GetComponent<AudioSource>();
+    }
 }

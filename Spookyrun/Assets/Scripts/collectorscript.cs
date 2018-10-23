@@ -7,8 +7,10 @@ public class collectorscript : MonoBehaviour {
     public bool isCandy = true;
     public bool isBoughtttle = false;
     public bool isSpringshroom = false;
-	// Use this for initialization
-	void Start () {
+    public AudioClip collectsound;
+    private AudioSource source;
+    // Use this for initialization
+    void Start () {
 		
 	}
 
@@ -42,6 +44,7 @@ public class collectorscript : MonoBehaviour {
         {
             if (isCandy == true) { 
                 floorscript.speed+= 0.5f;
+                source.PlayOneShot(collectsound);
             }
             if(isBoughtttle == true)
             {
@@ -59,6 +62,11 @@ public class collectorscript : MonoBehaviour {
                 transform.Translate(Random.Range(40f, 80f), Random.Range(-5.0f, 5.0f), 0F);
             }
         }
+    }
+    void Awake()
+    {
+
+        source = GetComponent<AudioSource>();
     }
 }
 
