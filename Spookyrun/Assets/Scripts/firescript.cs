@@ -36,6 +36,7 @@ public SpriteRenderer firesprite;
         }
         if (collision.gameObject.tag == "Water")
         {
+            gameObject.SetActive(false);
             Destroy(gameObject);
         }
     }

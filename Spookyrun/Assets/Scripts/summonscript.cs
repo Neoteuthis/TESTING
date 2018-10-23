@@ -5,6 +5,7 @@ using UnityEngine;
 public class summonscript : MonoBehaviour {
     public levelmanager mything;
     public static bool spawnnow = true;
+    public static int countdown = 3;
 	// Use this for initialization
 	void Start () {
 

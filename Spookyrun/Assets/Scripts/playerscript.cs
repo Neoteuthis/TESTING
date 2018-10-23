@@ -82,6 +82,7 @@ public class playerscript : MonoBehaviour {
         }
         if (Input.GetKey(KeyCode.S))
         {
+            this.GetComponent<SpriteRenderer>().sprite = mynormalsprite;
             if (waterlevel > 0 && spitting == true)
             {
                 waterlevel--;
@@ -105,6 +106,7 @@ public class playerscript : MonoBehaviour {
         if (Input.GetKey("space"))
         {
             transform.Translate(Vector2.up * 20* Time.deltaTime, Space.World);
+            this.GetComponent<SpriteRenderer>().sprite = mynormalsprite;
         }
         if(jumping)
             Timer1--;
