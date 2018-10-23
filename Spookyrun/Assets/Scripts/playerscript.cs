@@ -74,6 +74,7 @@ public class playerscript : MonoBehaviour {
         {
             transform.Translate(0.15F*FinalDir);
             playersprite.flipX = false;
+
         }
        if (Input.GetKey(KeyCode.A))
         {

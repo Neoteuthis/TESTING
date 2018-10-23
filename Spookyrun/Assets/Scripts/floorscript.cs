@@ -24,8 +24,9 @@ public class floorscript : MonoBehaviour
         transform.Translate(Dir*speed);
         //respawn
          if(isRoom == true) {
-            if (X.x < -80)
+            if (X.x < -100)
             {
+                Destroy(gameObject);
               ///  transform.Translate(80F, 0F, 0F);
             }
         }
