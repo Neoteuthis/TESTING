@@ -124,6 +124,10 @@ public class playerscript : MonoBehaviour {
         {
             //source.PlayOneShot(jumpSound);
         }
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
         if (jumping)
             Timer1--;
         Timer2--;
